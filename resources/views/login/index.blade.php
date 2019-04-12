@@ -30,19 +30,20 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Log in</div>
 				<div class="panel-body">
-					<form role="form">
+						<form action="{{ route('Verification') }}" method="POST">
 						<fieldset>
 						<br/>
-							<div class="form-group">
-								<input class="form-control" placeholder="Username" name="username" type="text" autofocus="">
-							</div>
-							<br/>
-							<div class="form-group">
-								<input class="form-control" placeholder="Password" name="password" type="password" value="">
-							</div>
-							<br/>
-							<a href="#" class="btn btn-primary">Login</a></fieldset>
-							<br/>
+						<div class="form-group">
+							<input class="form-control" placeholder="Username" name="username" type="text" autofocus="">
+						</div>
+						<br/>
+						<div class="form-group">
+							<input class="form-control" placeholder="Password" name="password" type="password" value="">
+						</div>
+						<br/>
+						<input type="submit" class="btn btn-primary" name="login" value="Login">
+						</fieldset>
+						<br/>
 					</form>
 				</div>
 			</div>

@@ -39,16 +39,6 @@
 				</div>
 			</div><!--/.col-->
 		</div>
-		
-		<div class="row">
-			<div class="col-md-6">
-				<div class="panel panel-blue">
-					<div class="panel-heading dark-overlay">
-					<a href={{route('signup.customer')}} style="color:white">Signup as CUSTOMER</a>
-					</div>
-				</div>
-			</div><!--/.col-->
-		</div>
 
 		<div class="row">
 			<div class="col-md-6">

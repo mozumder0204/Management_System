@@ -28,7 +28,7 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Signup | CUSTOMER</div>
 				<div class="panel-body">
-					<form role="form">
+					<form method="POST">
 						<fieldset>
 							<div class="form-group">
 								<input class="form-control" placeholder="Username..." name="username" type="text" autofocus="">
@@ -54,7 +54,8 @@
 								<input class="form-control" placeholder="Confirm Password..." name="confirm-password" 
 								type="password" value="">
 							</div>
-							<a href="#" class="btn btn-primary">Register</a></fieldset>
+							<input type="submit" class="btn btn-primary" name="register" value="Register">
+						</fieldset>
 					</form>
 				</div>
 			</div>

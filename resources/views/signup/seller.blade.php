@@ -53,7 +53,7 @@
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="Confirm Password..." name="confirm-password" 
-								type="password" value="">
+								type="cPassword" value="">
 							</div>
 							<input type="submit" class="btn btn-primary" name="register" value="Register">
 						</fieldset>
