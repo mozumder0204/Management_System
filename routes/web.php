@@ -9,6 +9,9 @@ Route::get('/', function () {
 Route::get('/login', 'LoginController@index')->name('login.index');
 Route::post('/login', 'LoginController@verify')->name('Verification');
 
+/****************** Logout Page ******************/
+Route::get('/logout', 'LogoutController@index')->name('logout.index');
+
 /****************** Signup Page ******************/
 Route::get('/signup', 'SignupController@index')->name('signup.index');
 

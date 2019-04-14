@@ -12,21 +12,17 @@ class LoginController extends Controller
     }
 
     public function verify(Request $req){
-        $username = $req->username;
-        $password = $req->password;
-        $validate = user_credential::where('username' , $username)
-                                   ->where ('password', $password)
+        $validate = user_credential::where('username' , $req->username)
+                                   ->where ('password', $req->password)
                                    ->first();
                                         
-                                         
-
         if($validate->user_type == "SELLER"){
+            $req->session()->put('loggedUser', $req->username);
             return redirect()->route('seller.index');
         }
         else{
             return view('login.index');
         }
-        
 
     }
 }
