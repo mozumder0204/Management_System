@@ -23,8 +23,14 @@ Route::post('/signup/seller', 'SignupController@sellerSignup');
 Route::get('/signup/admin', 'SignupController@admin')->name('signup.admin');
 Route::post('/signup/admin', 'SignupController@adminSignup');
 
+
+
+/****************UNDER SESSION CHECK****************/
+Route::group(["middleware"=>['sess']], function(){
+
 /****************** HomePage | SELLER ******************/
 Route::get('/home/seller', 'SellerController@index')->name('seller.index');
+Route::get('/home/seller/DailySells', 'SellerController@dailySells')->name('seller.dailySells');
 
 
 
@@ -34,3 +40,16 @@ Route::get('/home/seller', 'SellerController@index')->name('seller.index');
 
 /****************** HomePage | ADMIN ******************/
 Route::get('/home/admin', 'AdminController@index')->name('admin.index');
+
+
+
+
+
+
+
+
+
+
+
+
+});

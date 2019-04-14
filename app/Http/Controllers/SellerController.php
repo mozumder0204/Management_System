@@ -7,9 +7,26 @@ use App\Seller;
 
 class SellerController extends Controller
 {
-    public function index(Request $req){
+    public function index(){
 
-    	return view('seller.index');
-                                         
+    	return view('seller.index');                                
     }
+
+    public function dailySells(){
+
+    	return view('seller.dailySells');                                
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

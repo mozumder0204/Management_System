@@ -32,7 +32,7 @@
     <div class="divider"></div>
     <ul class="nav menu">
         <li class="active"><a href={{route('seller.index')}}><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-        <li><a href={{route('seller.dailySells')}}><em class="fa fa-calendar">&nbsp;</em> Daily Sells</a></li>
+        <li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> Daily Sells</a></li>
         <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> POS</a></li>
         <li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> Money Transfer</a></li>
         <li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> ADD Customer</a></li>
@@ -47,18 +47,20 @@
             <li><a href="#">
                 <em class="fa fa-home"></em>
             </a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Daily Sells</li>
         </ol>
     </div><!--/.row-->
     
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Dashboard</h1>
+            <h1 class="page-header">Daily Sells</h1>
         </div>
     </div><!--/.row-->
 {{----------------- Header/Title end-----------------}}
-<br><br><br>
-<h1 align="center" > Welcome {{session('loggedUser')}} !!!</h1>
+
+
+
+
    
     
 </body>
