@@ -30,9 +30,14 @@ Route::group(["middleware"=>['sess']], function(){
 
 /****************** HomePage | SELLER ******************/
 Route::get('/home/seller', 'SellerController@index')->name('seller.index');
-Route::get('/home/seller/DailySells', 'SellerController@dailySells')->name('seller.dailySells');
+
+Route::get('/home/seller/accounts/DailySells', 'SellerController@dailySells')->name('seller.dailySells');
+Route::post('/home/seller/accounts/DailySells', 'SellerController@insertDailySells');
 
 
+
+Route::get('/home/seller/inventory/addProduct', 'SellerController@addProduct')->name('seller.addProduct');
+Route::post('/home/seller/inventory/addProduct', 'SellerController@productToDb');
 
 // Route::get('/signup/customer', 'SignupController@customer')->name('signup.customer');
 // Route::post('/signup/customer', 'SignupController@customerSignup');
