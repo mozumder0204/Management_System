@@ -20,8 +20,8 @@ Route::get('/signup/seller', 'SignupController@seller')->name('signup.seller');
 Route::post('/signup/seller', 'SignupController@sellerSignup');
 
 /****************** Signup Page | ADMIN ******************/
-Route::get('/signup/admin', 'SignupController@admin')->name('signup.admin');
-Route::post('/signup/admin', 'SignupController@adminSignup');
+Route::get('/signup/manager', 'SignupController@manager')->name('signup.manager');
+Route::post('/signup/manager', 'SignupController@managerSignup');
 
 
 
@@ -31,20 +31,38 @@ Route::group(["middleware"=>['sess']], function(){
 /****************** HomePage | SELLER ******************/
 Route::get('/home/seller', 'SellerController@index')->name('seller.index');
 
+/****************** HomePage | SELLER | Accounts******************/
 Route::get('/home/seller/accounts/DailySells', 'SellerController@dailySells')->name('seller.dailySells');
 Route::post('/home/seller/accounts/DailySells', 'SellerController@insertDailySells');
+Route::get('/home/seller/accounts/POS', 'SellerController@POS')->name('seller.POS');
+Route::post('/home/seller/accounts/POS', 'SellerController@POSToDB');
+Route::get('/home/seller/accounts/moneyTransfer', 'SellerController@moneyTransfer')->name('seller.moneyTransfer');
+Route::post('/home/seller/accounts/moneyTransfer', 'SellerController@moneyTransferToDB');
+Route::get('/home/seller/accounts/addCustomer', 'SellerController@addCustomer')->name('seller.addCustomer');
+Route::post('/home/seller/accounts/addCustomer', 'SellerController@addCustomerToDB');
 
-
-
+/****************** HomePage | SELLER | Inventory******************/
+Route::get('/home/seller/inventory/shipmentList','SellerController@shipmentList')->name('seller.shipmentList');
+Route::get('/home/seller/inventory/addProduct', 'SellerController@addProduct')->name('seller.addProduct');
+Route::get('/home/seller/inventory/productDetails', 'SellerController@productDetails')->name('seller.productDetails');
+Route::get('/home/seller/inventory/shipmentReport', 'SellerController@shipmentReport')->name('seller.shipmentReport');
 Route::get('/home/seller/inventory/addProduct', 'SellerController@addProduct')->name('seller.addProduct');
 Route::post('/home/seller/inventory/addProduct', 'SellerController@productToDb');
 
-// Route::get('/signup/customer', 'SignupController@customer')->name('signup.customer');
-// Route::post('/signup/customer', 'SignupController@customerSignup');
+
 
 
 /****************** HomePage | ADMIN ******************/
-Route::get('/home/admin', 'AdminController@index')->name('admin.index');
+Route::get('/home/manager', 'ManagerController@index')->name('manager.index');
+
+Route::get('/home/manager/addFactory', 'ManagerController@addFactory')->name('manager.addFactory');
+Route::post('/home/manager/addFactory', 'ManagerController@addFactoryToDB');
+
+Route::get('/home/manager/rawmaterials', 'ManagerController@rawmaterials')->name('manager.rawmaterials');
+
+Route::get('/home/manager/factoryShipment', 'ManagerController@factoryShipment')->name('manager.factoryShipment');
+
+Route::get('/home/manager/factoryList', 'ManagerController@factoryList')->name('manager.factoryList');
 
 
 

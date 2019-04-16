@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seller - Dashboard</title>
+<title>Manager - Dashboard</title>
 <link href={{ asset('bootstrap/css/bootstrap.min.css') }} rel="stylesheet">
 <link href={{ asset('bootstrap/css/datepicker3.css') }} rel="stylesheet">
 <link href={{ asset('bootstrap/css/styles.css') }} rel="stylesheet">
@@ -33,43 +33,11 @@
     </div>
     <div class="divider"></div>
     <ul class="nav menu">
-        <li class="active"><a href={{route('seller.index')}}><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-        <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-            <em class="fa fa-navicon">&nbsp;</em> Accounts <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
-            </a>
-            <ul class="children collapse" id="sub-item-1">
-                <li><a href={{route('seller.dailySells')}}>
-                    <span class="fa fa-calendar">&nbsp;</span> Daily Sells
-                </a></li>
-                <li><a class="" href={{route('seller.POS')}}>
-                    <span class="fa fa-bar-chart">&nbsp;</span> POS
-                </a></li>
-                <li><a class="" href={{route('seller.moneyTransfer')}}>
-                    <span class="fa fa-toggle-off">&nbsp;</span> Money Transfer
-                </a></li>
-                <li><a class="" href={{route('seller.addCustomer')}}>
-                    <span class="fa fa-clone">&nbsp;</span> ADD Customer
-                </a></li>
-            </ul>
-        </li>
-        <li class="parent "><a data-toggle="collapse" href="#sub-item-2">
-            <em class="fa fa-navicon">&nbsp;</em> Inventory <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
-            </a>
-            <ul class="children collapse" id="sub-item-2">
-                <li><a href={{route('seller.shipmentList')}}>
-                    <span class="fa fa-calendar">&nbsp;</span> Shipment list
-                </a></li>
-                <li><a class="" href={{route('seller.addProduct')}}>
-                    <span class="fa fa-bar-chart">&nbsp;</span> ADD Product
-                </a></li>
-                <li><a class="" href={{route('seller.productDetails')}}>
-                    <span class="fa fa-toggle-off">&nbsp;</span> Product Datails
-                </a></li>
-                <li><a class="" href={{route('seller.shipmentReport')}}>
-                    <span class="fa fa-clone">&nbsp;</span> Shipment report
-                </a></li>
-            </ul>
-        </li>
+        <li class="active"><a href={{route('manager.index')}}><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+        <li><a href={{route('manager.addFactory')}}><em class="fa fa-calendar">&nbsp;</em> ADD Factory</a></li>
+        <li><a href={{route('manager.rawmaterials')}}><em class="fa fa-bar-chart">&nbsp;</em> RAW Materials</a></li>
+        <li><a href={{route('manager.factoryShipment')}}><em class="fa fa-toggle-off">&nbsp;</em> Factory Shipment</a></li>
+        <li><a href={{route('manager.factoryList')}}><em class="fa fa-clone">&nbsp;</em> List of Factory</a></li>
         <li><a href={{route('logout.index')}}><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
     </ul>
 </div><!--/.sidebar-->

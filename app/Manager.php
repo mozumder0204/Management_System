@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class Manager extends Model
 {
-    protected $primaryKey ="c_id";
+    protected $primaryKey ="username";
     public $timestamps =false;
 }

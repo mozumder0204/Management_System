@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class Factory extends Model
 {
-    protected $primaryKey ="c_id";
+    protected $table = 'factory';
+    protected $primaryKey ="f_id";
     public $timestamps =false;
 }

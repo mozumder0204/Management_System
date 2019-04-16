@@ -44,7 +44,7 @@
 			<div class="col-md-6">
 				<div class="panel panel-orange">
 					<div class="panel-heading dark-overlay">
-					<a href={{route('signup.admin')}} style="color:white">Signup as ADMIN</a>	
+					<a href={{route('signup.manager')}} style="color:white">Signup as FACTORY MANAGER</a>	
 					</div>
 				</div>
 			</div><!--/.col-->

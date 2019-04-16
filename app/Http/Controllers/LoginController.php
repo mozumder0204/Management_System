@@ -20,6 +20,11 @@ class LoginController extends Controller
             $req->session()->put('loggedUser', $req->username);
             return redirect()->route('seller.index');
         }
+        else if($validate->user_type == "MANAGER"){
+            $req->session()->put('loggedUser', $req->username);
+            return redirect()->route('manager.index');
+
+        }
         else{
             return view('login.index');
         }

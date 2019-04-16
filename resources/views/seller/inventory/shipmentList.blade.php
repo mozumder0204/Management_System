@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seller - Dashboard</title>
+<title>Seller - Shipment List</title>
 <link href={{ asset('bootstrap/css/bootstrap.min.css') }} rel="stylesheet">
 <link href={{ asset('bootstrap/css/datepicker3.css') }} rel="stylesheet">
 <link href={{ asset('bootstrap/css/styles.css') }} rel="stylesheet">
@@ -33,8 +33,8 @@
     </div>
     <div class="divider"></div>
     <ul class="nav menu">
-        <li class="active"><a href={{route('seller.index')}}><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-        <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+        <li><a href={{route('seller.index')}}><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+        <li class="parent"><a data-toggle="collapse" href="#sub-item-1">
             <em class="fa fa-navicon">&nbsp;</em> Accounts <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
@@ -52,10 +52,10 @@
                 </a></li>
             </ul>
         </li>
-        <li class="parent "><a data-toggle="collapse" href="#sub-item-2">
+        <li class="parent active"><a data-toggle="collapse" href="#sub-item-2">
             <em class="fa fa-navicon">&nbsp;</em> Inventory <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
-            <ul class="children collapse" id="sub-item-2">
+            <ul class="children expand" id="sub-item-2">
                 <li><a href={{route('seller.shipmentList')}}>
                     <span class="fa fa-calendar">&nbsp;</span> Shipment list
                 </a></li>
@@ -81,18 +81,20 @@
             <li><a href="#">
                 <em class="fa fa-home"></em>
             </a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Shipment List</li>
         </ol>
     </div><!--/.row-->
     
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Dashboard</h1>
+            <h1 class="page-header">Shipment List</h1>
         </div>
     </div><!--/.row-->
 {{----------------- Header/Title end-----------------}}
-<br><br><br>
-<h1 align="center" > Welcome {{session('loggedUser')}} !!!</h1>
+
+
+
+
    
     
 </body>

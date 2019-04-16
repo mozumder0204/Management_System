@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class POS extends Model
 {
-    protected $primaryKey ="c_id";
+    protected $table = 'POS';
+    protected $primaryKey ="pos_id";
     public $timestamps =false;
 }

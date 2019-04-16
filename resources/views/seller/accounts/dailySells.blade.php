@@ -41,13 +41,13 @@
                 <li><a href={{route('seller.dailySells')}}>
                     <span class="fa fa-calendar">&nbsp;</span> Daily Sells
                 </a></li>
-                <li><a class="" href="#">
+                <li><a class="" href={{route('seller.POS')}}>
                     <span class="fa fa-bar-chart">&nbsp;</span> POS
                 </a></li>
-                <li><a class="" href="#">
+                <li><a class="" href={{route('seller.moneyTransfer')}}>
                     <span class="fa fa-toggle-off">&nbsp;</span> Money Transfer
                 </a></li>
-                <li><a class="" href="#">
+                <li><a class="" href={{route('seller.addCustomer')}}>
                     <span class="fa fa-clone">&nbsp;</span> ADD Customer
                 </a></li>
             </ul>
@@ -56,16 +56,16 @@
             <em class="fa fa-navicon">&nbsp;</em> Inventory <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-2">
-                <li><a href="#">
+                <li><a href={{route('seller.shipmentList')}}>
                     <span class="fa fa-calendar">&nbsp;</span> Shipment list
                 </a></li>
                 <li><a class="" href={{route('seller.addProduct')}}>
                     <span class="fa fa-bar-chart">&nbsp;</span> ADD Product
                 </a></li>
-                <li><a class="" href="#">
+                <li><a class="" href={{route('seller.productDetails')}}>
                     <span class="fa fa-toggle-off">&nbsp;</span> Product Datails
                 </a></li>
-                <li><a class="" href="#">
+                <li><a class="" href={{route('seller.shipmentReport')}}>
                     <span class="fa fa-clone">&nbsp;</span> Shipment report
                 </a></li>
             </ul>

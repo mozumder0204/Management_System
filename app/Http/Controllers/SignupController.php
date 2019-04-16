@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Seller;
-use App\Admin;
+use App\Manager;
 use App\Customer;
 use App\user_credential;
 class SignupController extends Controller
@@ -36,46 +36,25 @@ class SignupController extends Controller
         return view('login.index');
     }
 
-/****************** CUSTOMER ******************/
-public function customer(){
-    return view('signup.customer');
+
+/****************** MANAGER  ******************/
+public function manager(){
+    return view('signup.manager');
     }
 
-    public function customerSignup(Request $req){  
-        $customer = new Customer;
-        $customer->username = $req->username;
-        $customer->c_name = $req->name;
-        $customer->c_email = $req->email;
-        $customer->c_address = $req->address;
-        $customer->c_mobile = $req->mobile;
-        $customer->save();
+    public function managerSignup(Request $req){  
+        $manager = new Manager();
+        $manager->username = $req->username;
+        $manager->m_name = $req->name;
+        $manager->m_email = $req->email;
+        $manager->m_address = $req->address;
+        $manager->m_mobile = $req->mobile;
+        $manager->save();
 
         $user = new user_credential();
         $user->username = $req->username;
         $user->password = $req->password;
-        $user->user_type = "CUSTOMER";
-        $user->save();
-
-        return view('login.index');
-    }
-/****************** ADMIN  ******************/
-public function admin(){
-    return view('signup.admin');
-    }
-
-    public function adminSignup(Request $req){  
-        $admin = new Admin();
-        $admin->username = $req->username;
-        $admin->a_name = $req->name;
-        $admin->a_email = $req->email;
-        $admin->a_address = $req->address;
-        $admin->a_mobile = $req->mobile;
-        $admin->save();
-
-        $user = new user_credential();
-        $user->username = $req->username;
-        $user->password = $req->password;
-        $user->user_type = "ADMIN";
+        $user->user_type = "MANAGER";
         $user->save();
 
         return view('login.index');
