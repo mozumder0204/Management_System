@@ -35,7 +35,8 @@
     <ul class="nav menu">
         <li class="active"><a href={{route('manager.index')}}><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
         <li><a href={{route('manager.addFactory')}}><em class="fa fa-calendar">&nbsp;</em> ADD Factory</a></li>
-        <li><a href={{route('manager.rawmaterials')}}><em class="fa fa-bar-chart">&nbsp;</em> RAW Materials</a></li>
+        <li><a href={{route('manager.rawmaterials')}}><em class="fa fa-bar-chart">&nbsp;</em> RAW Materials</a>
+        </li>
         <li><a href={{route('manager.factoryShipment')}}><em class="fa fa-toggle-off">&nbsp;</em> Factory Shipment</a></li>
         <li><a href={{route('manager.factoryList')}}><em class="fa fa-clone">&nbsp;</em> List of Factory</a></li>
         <li><a href={{route('logout.index')}}><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>

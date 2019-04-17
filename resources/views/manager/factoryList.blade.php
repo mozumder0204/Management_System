@@ -60,7 +60,21 @@
     </div><!--/.row-->
 {{----------------- Header/Title end-----------------}}
 <br><br><br>
-
+<table border="2" style="width:50%;" align="center" class="table table-striped table-dark" >
+        <tr>
+            <th>Factory Name</th>
+            <th>Address</th>
+            <th>Mobile No.</th>
+            <th>STATUS</th>
+        </tr>
+        @foreach($factory as $fr)
+        <tr>
+            <td>{{$fr['f_name']}}</td>
+            <td>{{$fr['f_address']}}</td>
+            <td>{{$fr['f_mobile']}}</td>
+            <td>{{$fr['STATUS']}}</td>
+         </tr>
+     @endforeach 
    
     
 </body>

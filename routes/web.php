@@ -52,16 +52,13 @@ Route::post('/home/seller/inventory/addProduct', 'SellerController@productToDb')
 
 
 
-/****************** HomePage | ADMIN ******************/
+/****************** HomePage | MANAGER ******************/
 Route::get('/home/manager', 'ManagerController@index')->name('manager.index');
-
 Route::get('/home/manager/addFactory', 'ManagerController@addFactory')->name('manager.addFactory');
 Route::post('/home/manager/addFactory', 'ManagerController@addFactoryToDB');
-
 Route::get('/home/manager/rawmaterials', 'ManagerController@rawmaterials')->name('manager.rawmaterials');
-
+Route::post('/home/manager/rawmaterials', 'ManagerController@rawmaterialsToDB');
 Route::get('/home/manager/factoryShipment', 'ManagerController@factoryShipment')->name('manager.factoryShipment');
-
 Route::get('/home/manager/factoryList', 'ManagerController@factoryList')->name('manager.factoryList');
 
 

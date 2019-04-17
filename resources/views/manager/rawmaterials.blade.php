@@ -60,6 +60,51 @@
     </div><!--/.row-->
 {{----------------- Header/Title end-----------------}}
 <br><br><br>
+<div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">RAW Materials</div>
+                <div class="panel-body">
+                        <form method="POST">
+                        <fieldset>
+                        <br/>
+                        <div class="form-group"> 
+                            <select name="fname" class="form-control" autofocus="">
+                                    <option value="name" disabled selected>Factory Name</option>
+                                    @foreach($factory as $pr)
+                                        <option value="{{$pr["f_id"]}}">{{$pr["f_name"]}}</option>
+                                        @endforeach
+                            </select>                       
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" placeholder="Material Name..." name="mname" type="text">
+                            </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Quantity..." name="quantity" type="text">
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" placeholder="Price..." name="price" type="text">
+                        </div>
+                        <div class="form-group">
+                            <select name="type" class="form-control">
+                                <option value="name" disabled selected>Production Type</option>
+                                    <option value="ABC">ABC</option>
+                                    <option value="MNO">MNO</option>
+                                    <option value="XYZ">XYZ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" name="date" type="date">
+                        </div>
+                        <br/>
+                        <input type="submit" class="btn btn-primary" name="submit" value="SUBMIT">
+                        </fieldset>
+                        <br/>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.col-->
+    </div><!-- /.row -->
 
    
     
